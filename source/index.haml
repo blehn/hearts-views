@@ -1,0 +1,28 @@
+#container
+  #sidebar.home
+    #signin
+      %form
+        %p
+          %input.input_medium{:placeholder => "email", :type => "text"}
+        %p
+          %input.input_medium{:type => "text", :placeholder => "password"}
+        %p
+          %input{:type => "checkbox"}
+          %label.label_checkbox Remember Me
+          %a{:href => "forgot"} Forgot Password
+        %p
+          %input{:value => "Sign In", :type => "submit"}
+    %h1 
+      %a{ :href => "/"} Hearts
+    %p Hearts is a safe and easy way to meet interesting people. It's free to sign up. We're currently rolling out to selected areas, but go ahead and sign up — we'll let you know as soon as the service is available in your area.
+    #signup
+      %form
+        %p
+          %input.input_medium{:placeholder => "email", :type => "text"}
+        %p
+          %input.input_medium{:placeholder => "ZIP code", :type => "text"}
+        %p
+          %input.input_medium{:placeholder => "Invite Code", :type => "text"}
+        %p
+          %input{:value => "Sign Up", :type => "submit"}
+= partial "footer"

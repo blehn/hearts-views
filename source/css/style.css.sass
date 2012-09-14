@@ -1,0 +1,220 @@
+@charset "UTF-8"
+
+@import "variables"
+@import "reset"
+@import "forms"
+
+html, body
+  height: 100%
+  font-family: $sans-font-stack
+  font-size: $body-font-size
+  line-height: $body-line-height
+  color: $body-color
+  -webkit-font-smoothing: antialiased
+p
+  margin: 10px 0
+a
+  color: $blue
+  text-decoration: none
+a:hover
+  color: darken($blue, 9%)
+#container
+  position: absolute
+  top: 0
+  left: 0
+  width: 1000px 
+  height: 100%
+  position: relative
+  #sidebar
+    position: fixed
+    top: 0
+    left: 0
+    width: 270px
+    height: 100%
+    padding: 0 30px
+    // background-color: rgba(60,14,234, .1)
+    h1
+      padding: 30px 0
+      font-weight: bold
+      font-size: 26px
+    form
+      width: 300px
+    &.home
+      left: 0
+      padding-top: 0
+      #signin
+        form
+          margin-top: 30px
+        label
+          margin: 0
+          &.label_checkbox
+            font-size: 10px
+            color: #999
+        a
+          font-size: 10px
+          margin: 0 0 0 10px
+          font-family: $input-font-stack
+        input
+          &[type="text"],
+          &[type="password"]
+            font-size: 11px
+        input
+          &[type="submit"]
+            font-size: 13px
+            background-color: #ddd
+            border: 1px solid #ddd
+            padding: 3px 10px 4px
+            color: lighten($black, 40%)
+            margin: 0
+            &:hover
+              background-color: #ccc
+      form
+        margin: 40px 0 20px 0
+        padding: 0
+        width: 250px
+      h1
+        font-size: 36px
+        margin: 30px 0 20px 0
+      h5
+        font-size: 16px
+      p
+        max-width: 220px
+        font-size: $body-font-size - 2px 
+
+  #filters
+    width: 100%
+    height: 100px
+    ul
+      li
+        padding: 10px 0
+
+  #main
+    position: absolute
+    top: 0
+    left: 270px
+    width: 720px
+    padding: 0 0 40px 30px
+    background-color: #fff
+    overflow: auto
+    // background-color: rgba(210,70,70, .1)
+    &.edit
+      form
+        padding: 40px 5px
+        h5
+          font-size: 16px
+        p
+          margin: 12px 0 
+          width: 250px
+          &.intro
+            margin: 0 0 30px 0
+            font-size: $body-font-size - 2px 
+    #stream
+      width: 100%
+      overflow: auto
+      .user-profile
+        float: left
+        width: 100%
+        height: auto
+        position: relative
+        margin-bottom: 20px
+        .user-images
+          float: left
+          height: auto
+          width: 430px
+          .main-image
+            width: 100%
+            overflow: auto
+            height: auto
+            img
+              width: 100%
+              height: auto
+              float: left
+        .user-info
+          width: 240px
+          position: absolute
+          left: 450px
+          top: 10px
+  #signup, #signin
+    margin: 20px 0 0 0
+
+// respond
+@media screen and (max-width: 749px)
+  #container
+    width: 100%
+    #sidebar
+      left: -270px
+    #main
+      width: 100%
+      left: 0
+      &.home
+        p
+          width: 200px
+      #stream
+        .user-profile
+          margin: 0 0 10px 0
+          .user-images
+            float: none
+            width: 100%
+            .main-image
+              img
+                width: 100%
+                float: none
+          .user-info
+            display: none
+@media screen and (min-width: 750px) and (max-width: 999px)
+  #container
+    width: 750px
+    #sidebar:
+      width: 220px
+      padding: 0 20px
+    #main
+      width: 480px
+      left: 270px
+      #stream
+        .user-profile
+          .user-images
+            width: 280px
+          .user-info
+            left: 320px
+            width: 180px
+@media screen and (min-width: 1000px) and (max-width: 1280px)
+  #container
+    #main
+      #stream
+        .user-profile
+          .user-images
+          .user-info
+@media screen and (min-width: 1281px) and  (max-width: 1650px)
+  #container
+    width: 1280px
+    #sidebar
+      width: 330px
+    #main
+      width: 950px
+      left: 330px
+      #stream
+        .user-profile
+          .user-images
+            width: 550px
+          .user-info
+            left: 570px
+@media screen and (min-width: 1651px) and (max-width: 4000px)
+  #container
+    width: 1500px
+    #sidebar
+      width: 330px
+    #main
+      width: 1070px
+      left: 330px
+      #stream
+        .user-profile
+          .user-images
+            width: 700px
+          .user-info
+            left: 720px
+          
+
+
+
+        
+

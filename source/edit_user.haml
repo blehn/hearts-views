@@ -1,0 +1,115 @@
+#container
+  #sidebar
+    %h1 
+      %a{ :href => "/"} Hearts
+    = partial "nav"
+  #main.edit
+    %form
+      %p.intro
+        Fill out the following profile form to begin using Hearts. Your profile will not be visible to other users until you complete this form. All fields required.
+      %p
+        %input.input_large{:type => "text", :placeholder => "Email"}
+      %p
+        %input.input_large{:type => "text", :placeholder => "Zip Code"}
+      %p
+        %input.input_large{:type => "text", :placeholder => "Password"}
+      %p
+        %input.input_large{:type => "text", :placeholder => "First Name"}
+      %p
+        %label Date of Birth
+        %br
+        %input.input_tiny{:type => "text", :placeholder => "MM"}
+        %input.input_tiny{:type => "text", :placeholder => "DD"}
+        %input.input_tiny{:type => "text", :placeholder => "YYYY"}
+      %p
+        %label Interested in
+        %br
+        %input{:type => "checkbox"}
+        %label.label_checkbox Men
+        %input{:type => "checkbox"}
+        %label.label_checkbox Women
+      %p
+        %label Height
+        %br
+        %input.input_tiny{:type => "text", :placeholder => "ft"}
+        %input.input_tiny{:type => "text", :placeholder => "in"}
+      %p
+        %label Body Type
+        %br
+        %select.input_large
+          %option Choose
+          %option Skinny
+          %option Thin
+          %option Fit
+          %option Athletic
+          %option Average
+          %option Soft
+          %option Curvy
+          %option Overweight
+      %p
+        %label Cigarettes
+        %br
+          %select.input_large
+            %option Choose
+            %option Never
+            %option Sometimes
+            %option While Drinking
+            %option Often
+      %p
+        %label Alcohol
+        %br
+          %select.input_large
+            %option Choose
+            %option Never
+            %option Sometimes
+            %option Socially
+            %option Often
+      %p
+        %label Drugs
+        %br
+          %select.input_large
+            %option Choose
+            %option Never
+            %option Sometimes
+            %option Often
+      %p
+        %label Religion
+        %br
+          %select.input_large
+            %option Choose
+            %option Athiest
+            %option Agnostic
+            %option Buddhist
+            %option Catholic
+            %option Christian
+            %option Hindu
+            %option Jewish
+            %option Muslim
+            %option Other
+      %p
+        %label Politics
+        %br
+          %select.input_large
+            %option Choose
+            %option Very Liberal
+            %option Liberal
+            %option Moderate
+            %option Libertarian
+            %option Conservative
+            %option Very Conservative
+      %p
+        %label Languages
+        %span.input_desc List languages in which you are fluent. i.e., You can have a meaningful conversation with a native speaker. Separate with commas.
+        %textarea.input_large
+      %p
+        %label Tags
+        %br
+        %span.input_desc List keywords about yourself here (interests, traits, etc). Separate with commas. Limit 25.
+        %textarea.input_large
+      %p
+        %label Photos
+        %span.input_desc You must upload 3 photos. Protip: don't use dark, blurry, cell phone/webcam pics — they make you look shady, even if you aren't.
+        %input{:value => "Select Photos", :type => "file"}
+      %p
+        %input{:value => "Save", :type => "submit"}
+= partial "footer"

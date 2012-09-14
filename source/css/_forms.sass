@@ -1,0 +1,393 @@
+.input_tiny
+  width: 50px
+
+.input_small
+  width: 150px
+
+.input_medium
+  width: 200px
+
+.input_large
+  width: 250px
+
+.input_xlarge
+  width: 300px
+
+.input_xxlarge
+  width: 350px
+
+.input_full
+  width: 100%
+
+.input_full_wrap
+  display: block
+  padding-right: 8px
+
+input
+  &[type="search"]::-webkit-search-decoration
+    display: none
+  &:invalid
+    -webkit-box-shadow: none
+    -moz-box-shadow: none
+    box-shadow: none
+
+button:invalid, a.button:invalid, select:invalid, textarea:invalid
+  -webkit-box-shadow: none
+  -moz-box-shadow: none
+  box-shadow: none
+
+input:focus, select:focus, textarea:focus
+  border: 1px solid lighten($blue, 10%) !important
+  z-index: 1
+  background-color: #fff !important
+
+input
+  &[type="file"]
+    padding: 0
+    margin: 0 0 8px
+
+input
+  &[type="file"]
+    &:focus, &:active
+      -webkit-box-shadow: none
+      -moz-box-shadow: none
+      box-shadow: none
+  &[type="radio"]
+    &:focus, &:active
+      -webkit-box-shadow: none
+      -moz-box-shadow: none
+      box-shadow: none
+  &[type="checkbox"]
+    &:focus, &:active
+      -webkit-box-shadow: none
+      -moz-box-shadow: none
+      box-shadow: none
+
+input, button, a.button
+  &[type="reset"], &[type="submit"], &[type="button"]
+    -webkit-appearance: none
+    background-color: $blue
+    cursor: pointer
+    border: none
+    color: #fff
+    display: inline-block
+    font-family: $body-font-family
+    font-size: $body-font-size
+    font-weight: bold
+    outline: 0
+    overflow: visible
+    margin: 5px 0 0 0
+    padding: 4px 12px 7px
+    text-decoration: none
+    vertical-align: top
+    width: auto
+    *padding-top: 3px
+    *padding-bottom: 2px
+
+input, button:hover, a.button:hover
+  &[type="reset"]:hover, &[type="submit"]:hover, &[type="button"]:hover
+    background-color: lighten($blue, 8%)
+
+input, button:focus, a.button:focus
+  &[type="reset"]:focus, &[type="submit"]:focus, &[type="button"]:focus
+    background-color: #fff !important
+    color: $black
+
+input, button:active, a.button:active
+  &[type="reset"]:active, &[type="submit"]:active, &[type="button"]:active
+    background-color: #bbb
+    color: #333
+
+button::-moz-focus-inner, a.button::-moz-focus-inner
+  border: 0
+  padding: 0
+
+input
+  &[type="reset"]::-moz-focus-inner, &[type="submit"]::-moz-focus-inner, &[type="button"]::-moz-focus-inner
+    border: 0
+    padding: 0
+
+a.button
+  *padding-bottom: 3px
+
+button
+  *padding-top: 1px
+  *padding-bottom: 1px
+
+textarea, select
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+  -webkit-background-clip: padding
+  -moz-background-clip: padding
+  background-clip: padding-box
+  -webkit-border-radius: 0
+  -moz-border-radius: 0
+  -ms-border-radius: 0
+  -o-border-radius: 0
+  border-radius: 0
+  -webkit-appearance: none
+  background-color: #f9f9f9
+  border: 1px solid
+  border-color: $input-border-color
+  color: black
+  outline: 0
+  margin: 0
+  padding: 3px 3px
+  text-align: left
+  font-size: $form-font-size - 1px
+  font-family: $input-font-stack
+  height: 2em
+  vertical-align: top
+  *padding-top: 3px
+  *padding-bottom: 2px
+  *height: auto
+
+input
+  &[type="date"], &[type="datetime"], &[type="datetime-local"], &[type="email"], &[type="month"], &[type="number"], &[type="password"], &[type="search"], &[type="tel"], &[type="text"], &[type="time"], &[type="url"], &[type="week"]
+    -webkit-box-sizing: border-box
+    -moz-box-sizing: border-box
+    box-sizing: border-box
+    -webkit-background-clip: padding
+    -moz-background-clip: padding
+    background-clip: padding-box
+    -webkit-border-radius: 0
+    -moz-border-radius: 0
+    -ms-border-radius: 0
+    -o-border-radius: 0
+    border-radius: 0
+    -webkit-appearance: none
+    background-color: #f9f9f9
+    border: 1px solid
+    border-color: $input-border-color
+    color: black
+    outline: 0
+    margin: 0
+    padding: 3px 3px
+    text-align: left
+    font-size: $form-font-size - 1px
+    font-family: $input-font-stack
+    height: 2em
+    vertical-align: top
+    *padding-top: 3px
+    *padding-bottom: 2px
+    *height: auto
+    
+
+textarea[disabled], select[disabled]
+  background-color: #eeeeee
+
+input
+  &[type="date"][disabled], &[type="datetime"][disabled], &[type="datetime-local"][disabled], &[type="email"][disabled], &[type="month"][disabled], &[type="number"][disabled], &[type="password"][disabled], &[type="search"][disabled], &[type="tel"][disabled], &[type="text"][disabled], &[type="time"][disabled], &[type="url"][disabled], &[type="week"][disabled]
+    background-color: #eeeeee
+
+button[disabled], input[disabled]
+  -webkit-box-shadow: none
+  -moz-box-shadow: none
+  box-shadow: none
+  -moz-user-select: -moz-none
+  -webkit-user-select: none
+  -khtml-user-select: none
+  user-select: none
+  color: #888888
+  cursor: default
+
+select[disabled]
+  -webkit-box-shadow: none
+  -moz-box-shadow: none
+  box-shadow: none
+  -moz-user-select: -moz-none
+  -webkit-user-select: none
+  -khtml-user-select: none
+  user-select: none
+  color: #888888
+  cursor: default
+  option, optgroup
+    -webkit-box-shadow: none
+    -moz-box-shadow: none
+    box-shadow: none
+    -moz-user-select: -moz-none
+    -webkit-user-select: none
+    -khtml-user-select: none
+    user-select: none
+    color: #888888
+    cursor: default
+
+textarea[disabled], a.button_disabled
+  -webkit-box-shadow: none
+  -moz-box-shadow: none
+  box-shadow: none
+  -moz-user-select: -moz-none
+  -webkit-user-select: none
+  -khtml-user-select: none
+  user-select: none
+  color: #888888
+  cursor: default
+
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder, input:-moz-placeholder, textarea:-moz-placeholder, input.placeholder_text
+  color: #888888
+
+textarea
+  &.placeholder_text
+    color: #888888
+  height: auto
+
+select
+  &[size], &[multiple]
+    height: 2em
+  &[size="0"], &[size="1"]
+    height: 2em
+    *height: auto
+
+@media (-webkit-min-device-pixel-ratio: 0)
+  select
+    &[size]
+      background-image: none
+      padding-right: 3px
+    &[multiple]
+      background-image: none
+      padding-right: 3px
+      &[size]
+        background-image: none
+        padding-right: 3px
+    background-image: url(data:image/png;base64,R0lGODlhDQAEAIAAAAAAAP8A/yH5BAEHAAEALAAAAAANAAQAAAILhA+hG5jMDpxvhgIAOw==)
+    background-repeat: no-repeat
+    background-position: right center
+    padding-right: 20px
+    &[size="0"], &[size="1"]
+      background-image: url(data:image/png;base64,R0lGODlhDQAEAIAAAAAAAP8A/yH5BAEHAAEALAAAAAANAAQAAAILhA+hG5jMDpxvhgIAOw==)
+      background-repeat: no-repeat
+      background-position: right center
+      padding-right: 20px
+  \::-webkit-validation-bubble-message
+    -webkit-box-shadow: none
+    box-shadow: none
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #666666), color-stop(1, black))
+    border: 1px solid
+    border-color: #747474 #5e5e5e #4f4f4f
+    color: white
+    font: 13px / 17px "Lucida Grande", Arial, "Liberation Sans", FreeSans, sans-input
+    overflow: hidden
+    padding: 15px 15px 17px
+    text-shadow: black 0 0 1px
+    height: 16px
+  \::-webkit-validation-bubble-arrow, ::-webkit-validation-bubble-top-outer-arrow, ::-webkit-validation-bubble-top-inner-arrow
+    -webkit-box-shadow: none
+    box-shadow: none
+    background: #666666
+    border: 0
+
+textarea
+  min-height: 80px
+  overflow: auto
+  resize: vertical
+  width: 100%
+
+optgroup
+  color: black
+  font-style: normal
+  font-weight: normal
+  font-size: $form-font-size - 1px
+  font-family: $input-font-stack
+  &::-moz-focus-inner
+    border: 0
+    padding: 0
+
+.ie6_button
+  background: #dddddd url('../images/button.png?1298351022') repeat-x
+  border: 1px solid
+  border-color: $input-border-color
+  cursor: pointer
+  color: #333333
+  font: bold 12px / 1.2 Arial, sans-input
+  padding: 2px 10px 0px
+  text-decoration: none
+  overflow: visible
+  vertical-align: top
+  width: auto
+
+* html
+  button
+    background: #dddddd url('../images/button.png?1298351022') repeat-x
+    border: 1px solid
+    border-color: $input-border-color
+    cursor: pointer
+    color: #333333
+    font: bold 12px / 1.2 Arial, sans-input
+    padding: 2px 10px 0px
+    text-decoration: none
+    overflow: visible
+    vertical-align: top
+    width: auto
+  a.button
+    background: #dddddd url('../images/button.png?1298351022') repeat-x
+    border: 1px solid
+    border-color: $input-border-color
+    cursor: pointer
+    color: #333333
+    font: bold 12px / 1.2 Arial, sans-input
+    padding: 2px 10px 0px
+    text-decoration: none
+    overflow: visible
+    vertical-align: top
+    width: auto
+    position: relative
+    top: 3px
+    padding-bottom: 2px
+  button
+    padding-top: 1px
+    padding-bottom: 1px
+
+label
+  margin: 6px 0 3px
+  display: inline-block
+  color: $body-color
+  font-weight: bold
+  &.label_checkbox, &.label_radio
+    font-weight: normal
+    font-family: $input-font-stack
+    font-size: $body-font-size - 1px
+    margin-right: 7px
+span.input_desc
+  display: block
+  width: 250px
+  line-height: 1.4
+  color: lighten($black, 40%)
+  font-size: $form-font-size - 2px
+  margin: 0 0 6px 0
+.ie6_input
+  background: white
+  border: 1px solid
+  border-color: $input-border-color
+  color: black
+  padding: 2px 3px 1px
+  font-size: $form-font-size - 1px
+  font-family: $input-font-stack
+  vertical-align: top
+
+* html
+  textarea
+    background: white
+    border: 1px solid
+    border-color: $input-border-color
+    color: black
+    padding: 2px 3px 1px
+    font-size: $form-font-size - 1px
+    font-family: $input-font-stack
+    vertical-align: top
+  select
+    background: white
+    border: 1px solid
+    border-color: $input-border-color
+    color: black
+    padding: 2px 3px 1px
+    font-size: $form-font-size - 1px
+    font-family: $input-font-stack
+    vertical-align: top
+    margin-top: 1px
+
+.placeholder_text, .ie6_input_disabled, .ie6_button_disabled
+  color: #888888
+
+.ie6_input_disabled
+  background: #eeeeee
