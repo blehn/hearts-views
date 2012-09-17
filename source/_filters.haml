@@ -28,8 +28,8 @@
         %br
         %span skinny, thin, athletic, fit, average, curvy, overweight, muscular
         .filter_group
-          %input{:type => "checkbox"}
-          %label.label_checkbox Skinny
+          %input{:type => "checkbox", :id => "checkbox_skinny"}
+          %label.label_checkbox{:for => "checkbox_skinny"} Skinny
           %br
           %input{:type => "checkbox"}
           %label.label_checkbox Thin
