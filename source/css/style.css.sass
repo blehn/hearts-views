@@ -29,9 +29,12 @@ a:hover
     position: fixed
     top: 0
     left: 0
-    width: 270px
+    width: 300px
     height: 100%
     padding: 0 30px
+    overflow-y: auto
+    overflow-x: visible
+
     // background-color: rgba(60,14,234, .1)
     h1
       padding: 30px 0
@@ -81,21 +84,39 @@ a:hover
         font-size: 16px
       p
         max-width: 220px
-        font-size: $body-font-size - 2px 
+        font-size: $body-font-size 
 
   #filters
-    width: 100%
+    overflow: visible
     margin: 30px 0 0
+    max-width: 220px
+    padding: 0 0 30px 0
+    .filter_group
+      display: none
+      padding: 6px 0 10px 0
     ul
       li
-        padding: 5px 0
-
+        line-height: 1.2
+        padding: 6px 10px 10px
+        margin: 0 0 0 -10px
+        color: #999
+        &.active
+          background-color: #eee
+          .filter_group
+            display: block
+          span
+            display: none
+          &:hover
+            background-color: #eee
+        &:hover
+          background-color: #f6f6f6
+          cursor: pointer
   #main
     position: absolute
     top: 0
-    left: 270px
+    left: 300px
     width: 720px
-    padding: 0 0 40px 30px
+    padding: 0 0 40px 0
     background-color: #fff
     overflow: auto
     // background-color: rgba(210,70,70, .1)
@@ -119,6 +140,12 @@ a:hover
         height: auto
         position: relative
         margin-bottom: 20px
+        &.current
+          .main-image
+            .actions
+              a
+                background-image: none !important
+                text-indent: 0 !important
         .user-images
           float: left
           height: auto
@@ -135,21 +162,53 @@ a:hover
               left: 0
               bottom: 0
               margin: 0
-              background-color: rgba(255,255, 255, .4)
-              padding: 5px
               a
                 display: block
-                padding: 5px 
+                padding: 15px 8px 0
                 margin: 0
-                background-color: #fff
+                width: 50px
+                height: 50px
+                overflow: hidden
+                background-color: #eee
+                color: $black
+                text-align: center
+                font-weight: bold
+                font-size: 14px
+                background-repeat: no-repeat
+                text-indent: -10000px
+                background-image: url(../img/sprite.png)
+                opacity: .6
+                &.active
+                  background-color: #eee
+                  opacity: 1
+                  background-image: url(../img/sprite.png) !important
+                  text-indent: -10000px !important
+                em
+                  font-style: normal
+                  border-bottom: 1px solid
+                &:hover
+                  background-color: #eee
+                  cursor: pointer
+                  opacity: 1
+                &.like
+                  color: $red
+                  background-position: -300px 0
+                  &.active
+                    background-position: -350px 0
+                &.hide
+                  background-position: -100px 0
+                  &.active
+                    background-position: -150px 0
                 &.flag
+                  background-position: -200px 0
                   position: absolute
                   bottom: 0
+                  &.active
+                    background-position: -250px 0
             img
               width: 100%
               height: auto
               float: left
-              opacity: 0 
         .user-info
           width: 240px
           position: absolute
@@ -187,7 +246,7 @@ a:hover
 @media screen and (min-width: 750px) and (max-width: 999px)
   #container
     width: 750px
-    #sidebar:
+    #sidebar
       width: 220px
       padding: 0 20px
     #main
@@ -198,6 +257,9 @@ a:hover
           margin: 0 0 10px 0
           .user-images
             width: 300px
+            .main-image
+              .actions
+                a
           .user-info
             left: 320px
             width: 180px

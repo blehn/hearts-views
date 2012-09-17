@@ -2,7 +2,7 @@
   width: 50px
 
 .input_small
-  width: 150px
+  width: 70px
 
 .input_medium
   width: 200px
@@ -66,7 +66,7 @@ input
 input, button, a.button
   &[type="reset"], &[type="submit"], &[type="button"]
     -webkit-appearance: none
-    background-color: $peach
+    background-color: $red
     cursor: pointer
     border: none
     color: #fff
@@ -84,9 +84,10 @@ input, button, a.button
     *padding-top: 3px
     *padding-bottom: 2px
 
+
 input, button:hover, a.button:hover
   &[type="reset"]:hover, &[type="submit"]:hover, &[type="button"]:hover
-    background-color: lighten($peach, 8%)
+    background-color: darken($red, 5%)
 
 input, button:focus, a.button:focus
   &[type="reset"]:focus, &[type="submit"]:focus, &[type="button"]:focus
@@ -95,8 +96,7 @@ input, button:focus, a.button:focus
 
 input, button:active, a.button:active
   &[type="reset"]:active, &[type="submit"]:active, &[type="button"]:active
-    background-color: #bbb
-    color: #333
+    background-color: darken($red, 10%)
 
 button::-moz-focus-inner, a.button::-moz-focus-inner
   border: 0
@@ -391,3 +391,14 @@ span.input_desc
 
 .ie6_input_disabled
   background: #eeeeee
+
+#filters
+  button, a.button, select, option, input
+    &[type="date"], &[type="datetime"], &[type="datetime-local"], &[type="email"], &[type="month"], &[type="number"], &[type="password"], &[type="search"], &[type="tel"], &[type="text"], &[type="time"], &[type="url"], &[type="week"], &[type="submit"]
+  input[type="submit"], button, a.button
+  .label_checkbox
+    padding: 0
+    margin: 0
+  textarea
+    min-height: 30px
+    width: 100%
