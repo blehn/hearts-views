@@ -82,7 +82,7 @@ var pagingKeys = function() {
 
   // settings
   var config = {
-    nodeSelector:        '.user-profile a.like',  // used to select each item on the page and place in the map (must be a link)
+    nodeSelector:        '.user_profile',  // used to select each item on the page and place in the map (must be a link)
     prevPageSelector:    '.prev_page',                // link on this element should always jump to prev page a.prev_page (must be a link)
     nextPageSelector:    '.next_page',                // link on this element should always jump to next page a.next_page (must be a link)
     pagingNavId:         'paging-nav',                // dom id of the floating page navigation element
@@ -91,7 +91,7 @@ var pagingKeys = function() {
     keyNextPage:         'h',
     keyPrevPage:         'l',
     keyRefresh:          'r',
-    currentItemClass:    'current',            // optional, class assigned to each element you jump to, set to null or remove to disable
+    currentItemClass:    'paging-current',            // optional, class assigned to each element you jump to, set to null or remove to disable
     additionalBodyClass: 'paging-keys',               // this class is assigned to the page body on load
     bottomAnchor:        'bottom'                     // the name of the anchor (without #) at end of page, e.g. set on last post on the page
   };
@@ -126,7 +126,7 @@ var pagingKeys = function() {
 
   function addItemToMap(n) {
     var pos = $(n).offset();
-    item_map.push({id: n.id, y: Math.round(pos.top) - 20});
+    item_map.push({id: n.id, y: Math.round(pos.top)});
   }
 
   function setNavCSS() {
@@ -370,3 +370,4 @@ var pagingKeys = function() {
 }();
 
 pagingKeys.init();
+

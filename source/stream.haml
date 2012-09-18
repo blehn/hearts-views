@@ -1,3 +1,13 @@
+%p#keyboard
+  J - next 
+  %br
+  K - prev
+  %br
+  L - like 
+  %br
+  H - hide 
+  %br
+  &#8629; - expand 
 #container
   #sidebar
     %h1 
@@ -5,6 +15,9 @@
     = partial "nav"
     = partial "filters"
   #main
+    #mobile_header 
+      %h1 Hearts
+      %a toggle
     #stream
       = partial "user_profile"
       = partial "user_profile"
