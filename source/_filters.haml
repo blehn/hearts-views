@@ -67,22 +67,91 @@
           %br
           %input{:type => "checkbox"}
           %label.label_checkbox often
-      -#%li
-        -#%label Alcohol
-        -#%br
-        -#%span never, sometimes, socially
-      -#%li
-        -#%label Drugs
-        -#%br
-        -#%span never, sometimes
-      -#%li
-        -#%label Religion
-        -#%br
-        -#%span Athiest, Agnostic, Buddhist, Christian, Hindu, Jewish
-      -#%li
-        -#%label Politics
-        -#%br
-        -#%span very liberal, liberal, moderate
+      %li
+        %label Alcohol
+        %br
+        %span never, sometimes, socially
+        .filter_group
+          %input{:type => "checkbox"}
+          %label.label_checkbox never
+          %br
+          %input{:type => "checkbox"}
+          %label.label_checkbox sometimes
+          %br
+          %input{:type => "checkbox"}
+          %label.label_checkbox while drinking
+          %br
+          %input{:type => "checkbox"}
+          %label.label_checkbox often
+      %li
+        %label Drugs
+        %br
+        %span never, sometimes
+        .filter_group
+          %input{:type => "checkbox"}
+          %label.label_checkbox never
+          %br
+          %input{:type => "checkbox"}
+          %label.label_checkbox sometimes
+          %br
+          %input{:type => "checkbox"}
+          %label.label_checkbox while drinking
+          %br
+          %input{:type => "checkbox"}
+          %label.label_checkbox often
+      %li
+        %label Religion
+        %br
+        %span Athiest, Agnostic, Buddhist, Christian, Hindu, Jewish
+        .filter_group
+          %input{:type => "checkbox"}
+          %label.label_checkbox Athiest
+          %br
+          %input{:type => "checkbox"}
+          %label.label_checkbox Agnostic
+          %br
+          %input{:type => "checkbox"}
+          %label.label_checkbox Buddhist
+          %br
+          %input{:type => "checkbox"}
+          %label.label_checkbox Catholic
+          %br
+          %input{:type => "checkbox"}
+          %label.label_checkbox Christian
+          %br
+          %input{:type => "checkbox"}
+          %label.label_checkbox Jewish
+          %br
+          %input{:type => "checkbox"}
+          %label.label_checkbox Islam
+          %br
+          %input{:type => "checkbox"}
+          %label.label_checkbox Hindu
+          %br
+          %input{:type => "checkbox"}
+          %label.label_checkbox Other
+      %li
+        %label Politics
+        %br
+        %span very liberal, liberal, moderate
+        .filter_group
+          %input{:type => "checkbox"}
+          %label.label_checkbox Very liberal
+          %br
+          %input{:type => "checkbox"}
+          %label.label_checkbox Liberal
+          %br
+          %input{:type => "checkbox"}
+          %label.label_checkbox Moderate
+          %br
+          %input{:type => "checkbox"}
+          %label.label_checkbox Libertarian
+          %br
+          %input{:type => "checkbox"}
+          %label.label_checkbox Conservative
+          %br
+          %input{:type => "checkbox"}
+          %label.label_checkbox Very Conservative
       %li
         %label Languages
         %br
