@@ -9,11 +9,12 @@
   %br
   &#8629; - expand 
 #container
-  #sidebar
-    %h1 
-      %a{ :href => "/"} Hearts
-    = partial "nav"
-    = partial "filters"
+  #sidebar_wrap
+    #sidebar
+      %h1 
+        %a{ :href => "/"} Hearts
+      = partial "nav"
+      = partial "filters"
   #main
     #mobile_header 
       %h1 Hearts

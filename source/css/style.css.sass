@@ -42,7 +42,9 @@ a:hover
     color: $blue
     font-size: 22px
     text-align: right
-    padding: 0 20px 0 0
+    position: fixed
+    top: 10px
+    right: 15px
   a
     cursor: pointer
     position: absolute
@@ -62,16 +64,22 @@ a:hover
   width: 1000px 
   height: 100%
   position: relative
-  #sidebar
+  #sidebar_wrap
     position: fixed
     top: 0
     left: 0
-    width: 300px
+    width: 250px
+    height: 100%
+    overflow: hidden
+  #sidebar
+    position: absolute
+    top: 0
+    left: 0
+    width: 270px
     height: 100%
     padding: 0 30px
     overflow-y: auto
     overflow-x: visible
-
     // background-color: rgba(60,14,234, .1)
     h1
       padding: 30px 0
@@ -284,9 +292,6 @@ a:hover
     width: 100%
     overflow-x: hidden
     #sidebar
-      width: 270px
-      padding: 0 20px
-      -webkit-box-shadow: -3px 0 5px #aaa inset
       h1
         display: none
       nav
@@ -295,6 +300,7 @@ a:hover
       width: 100%
       margin-left: 0
       left: 0
+      box-shadow: -3px 0 5px #aaa
       &.home
         p
           width: 200px
@@ -321,13 +327,15 @@ a:hover
   #container
     width: 750px
     #sidebar
-      width: 270px
-      padding: 0 20px
-      -webkit-box-shadow: -3px 0 5px #aaa inset
+      h1
+        display: none
+      nav
+        margin-top: 20px
     #main
       width: 730px
       left: 0
       overflow: hidden
+      box-shadow: -3px 0 5px #aaa
       #stream
         padding-top: 50px
         .user_profile
@@ -355,7 +363,6 @@ a:hover
   #container
     width: 1280px
     #sidebar
-      width: 330px
     #main
       width: 950px
       left: 330px
@@ -375,7 +382,6 @@ a:hover
   #container
     width: 1500px
     #sidebar
-      width: 330px
     #main
       width: 1070px
       left: 330px
