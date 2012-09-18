@@ -9,10 +9,15 @@ jQuery(document).ready(function(){
 
   //toggle filter group
    $('#filters ul li').click(function(e) {
+      if ( $(e.target).is('input')) {
+        e.stopPropagation();
+      }
+      else {
         $('#filters ul li').removeClass('active');
         $(this).toggleClass('active');
-        $(this).find('input[type="text"], textarea').first().focus();
+        $(this).find('input, textarea, select').first().focus();
         e.stopPropagation();
+      }
    });
 
 
@@ -21,7 +26,7 @@ jQuery(document).ready(function(){
    });
 
   // toggle sidebar 
-  $('#mobile_header a').toggle(function(){
+  $('#mobile_header .sidebar_toggle').toggle(function(){
       $('#main').animate({left: "270px"}, 220);
       $('#mobile_header').animate({left: "270px"}, 220);
       return
@@ -51,7 +56,6 @@ jQuery(document).ready(function(){
                   }
           });
       });
-
 
 
      

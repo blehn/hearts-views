@@ -18,6 +18,10 @@ a
   text-decoration: none
 a:hover
   color: darken($blue, 9%)
+#scrollable
+  position: fixed
+  bottom: 0
+  left: 0
 #keyboard
   position: fixed
   bottom: 0
@@ -45,7 +49,7 @@ a:hover
     position: fixed
     top: 10px
     right: 15px
-  a
+  a.sidebar_toggle
     cursor: pointer
     position: absolute
     top: 0
@@ -291,7 +295,7 @@ a:hover
   #container
     width: 100%
     overflow-x: hidden
-    #sidebar
+    #sidebar.stream
       h1
         display: none
       nav
@@ -326,7 +330,7 @@ a:hover
     display: none
   #container
     width: 750px
-    #sidebar
+    #sidebar.stream
       h1
         display: none
       nav

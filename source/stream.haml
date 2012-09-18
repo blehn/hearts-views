@@ -1,4 +1,4 @@
-%p#keyboard
+#keyboard
   J - next 
   %br
   K - prev
@@ -10,15 +10,16 @@
   &#8629; - expand 
 #container
   #sidebar_wrap
-    #sidebar
+    #sidebar.stream
       %h1 
         %a{ :href => "/"} Hearts
       = partial "nav"
       = partial "filters"
   #main
     #mobile_header 
-      %h1 Hearts
-      %a toggle
+      %h1
+        %a{ :href => "/"} Hearts
+      %a.sidebar_toggle toggle
     #stream
       = partial "user_profile"
       = partial "user_profile"
